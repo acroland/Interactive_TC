@@ -372,10 +372,10 @@ async function refreshHeatIndex() {
     }
 
     if (sunImage && walkerImage) {
-      const normalSun = '/data/Sun_Normal.png';
-      const normalWalker = '/data/Normal.png';
-      const hotSun = '/data/Sun_Hot.png';
-      const hotWalker = '/data/Hot.png';
+      const normalSun = './data/Sun_Normal.png';
+      const normalWalker = './data/Normal.png';
+      const hotSun = './data/Sun_Hot.png';
+      const hotWalker = './data/Hot.png';
 
       if (hazard.level === 'low-risk') {
         sunImage.src = normalSun;
