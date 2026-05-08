@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transect Heat Index Game</title>
+  </head>
+  <body>
+    <div id="streetview"></div>
+    <div id="app">
+      <div id="info-window">
+        <p><strong>Heat Index:</strong> <span id="heat-index">Loading...</span></p>
+        <p><strong>Tree Canopy:</strong> <span id="tree-canopy">Loading...</span>%</p>
+        <p><strong>Impervious Surfaces:</strong> <span id="impervious">Loading...</span>%</p>
+        <p><strong>Building Height / Street Width:</strong> <span id="hw-ratio">Loading...</span></p>
+      </div>
+      <div id="heat-hazard-window">
+        <p><strong>Heat Hazard:</strong></p>
+        <p id="heat-hazard">Loading...</p>
+        <div id="heat-hazard-animation">
+          <img id="sun-img" class="sun" src="/data/Sun_Normal.png" alt="Sun animation" />
+          <img id="walker-img" class="walker" src="/data/Normal.png" alt="Walker animation" />
+        </div>
+      </div>
+      <div id="status-window">Status: Loading app...</div>
+      <div id="map-window">
+        <div id="map-container"></div>
+      </div>
+      <div id="navigation">
+        <button id="return-start">Return to Start</button>
+      </div>
+    </div>
+    <script>
+      window.initMap = function() {
+        if (window.__realInitMap) {
+          window.__realInitMap();
+        } else {
+          window.__initMapPending = true;
+        }
+      };
+    </script>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMc5UDnfl_TAlMPvJwzN6an5Qym8_u5xk&libraries=streetview&callback=initMap" defer></script>
+  </body>
+</html>
