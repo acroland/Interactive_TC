@@ -14,10 +14,10 @@ const walkerImage = document.getElementById('walker-img');
 const statusWindow = document.getElementById('status-window');
 
 const FILES = {
-  raster: '/data/t1aggEBKlogHI.tif',
-  bounds: '/data/t1Poly.geojson',
-  stats: '/data/t1agg.geojson',
-  start: '/data/startPt.geojson',
+  raster: './data/t1aggEBKlogHI.tif',
+  bounds: './data/t1Poly.geojson',
+  stats: './data/t1agg.geojson',
+  start: './data/startPt.geojson',
 };
 
 const transectOrigin = { lat: 35.2271, lng: -80.8371 };
